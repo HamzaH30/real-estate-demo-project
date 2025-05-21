@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 export default function Index() {
   return (
@@ -10,10 +10,20 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+      <Text className="font-bold text-blue-500 text-lg my-10">
+        Welcome to Real Estate App
+      </Text>
       <Link href="/sign-in">Sign In</Link>
       <Link href="/explore">Explore</Link>
       <Link href="/profile">Profile</Link>
-      <Link href="/properties/1">Property</Link>
+      <Link
+        href={{
+          pathname: "/properties/[id]",
+          params: { id: "1" },
+        }} // This is the same as just writing "/properties/1" as the href directly as a string
+      >
+        Property
+      </Link>
     </View>
   );
 }
