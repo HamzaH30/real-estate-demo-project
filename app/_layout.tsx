@@ -27,5 +27,5 @@ export default function RootLayout() {
   }
 
   // Stack is the default layout for the app. It contains the screens that are used in the app.
-  return <Stack />;
+  return <Stack screenOptions={{ headerShown: false }} />; // This is used to hide the default header of the app.
 }
