@@ -16,6 +16,7 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
+      "package": "com.hamza.realestateapp",
       "edgeToEdgeEnabled": true
     },
     "web": {
