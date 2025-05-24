@@ -1,3 +1,4 @@
+import GlobalProvider from "@/lib/global-provider";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
@@ -27,5 +28,10 @@ export default function RootLayout() {
   }
 
   // Stack is the default layout for the app. It contains the screens that are used in the app.
-  return <Stack screenOptions={{ headerShown: false }} />; // This is used to hide the default header of the app.
+  return (
+    <GlobalProvider>
+      {/* This is used to hide the default header of the app. */}
+      <Stack screenOptions={{ headerShown: false }} />
+    </GlobalProvider>
+  );
 }

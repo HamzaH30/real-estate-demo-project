@@ -5,7 +5,7 @@ import { Account, Avatars, Client, OAuthProvider } from "react-native-appwrite";
 export const config = {
     platform: "com.hamza.realestateapp",
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
-    projectId: process.env.EXPO_PUBLIC_APPWRITE_PUBLIC_ID,
+    projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
 };
 
 export const client = new Client();
@@ -93,7 +93,7 @@ export async function logout() {
 }
 
 // 'Action' is a function that is used to get the user
-export async function getUser() {
+export async function getCurrentUser() {
     try {
         // Get the user
         const response = await account.get();
